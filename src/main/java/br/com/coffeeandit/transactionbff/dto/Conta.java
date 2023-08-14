@@ -1,4 +1,4 @@
-package br.com.coffeandit.transactionbff.dto;
+package br.com.coffeeandit.transactionbff.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
@@ -6,19 +6,21 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.validation.constraints.NotNull;
+import java.io.Serial;
+import java.io.Serializable;
 
-@Getter
 @Setter
+@Getter
 @ToString
-public class Conta {
-private static final long serialVersionUID = 2806412403585360625L;
+public class Conta implements Serializable {
 
-    @Schema(description = "Código da Agência")
-    @NotNull(message = "Informar o código da Agência.")
+    @Serial
+    private static final long serialVersionUID = 1080701735968423552L;
+
+    @NotNull(message = "Informar o código da Agência")
     private Long codigoAgencia;
-    
+
     @Schema(description = "Código da Conta")
     @NotNull(message = "Informar o código da Conta.")
     private Long codigoConta;
-
 }

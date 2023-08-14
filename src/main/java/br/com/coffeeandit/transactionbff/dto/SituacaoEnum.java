@@ -1,10 +1,9 @@
-package br.com.coffeandit.transactionbff.dto;
+package br.com.coffeeandit.transactionbff.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema
 public enum SituacaoEnum {
-
     ANALISADA,
     NAO_ANALISADA,
     EM_ANALISE_HUMANA,
